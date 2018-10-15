@@ -1,0 +1,23 @@
+{
+  "name": "soda-flow",
+  "version": "1.0.0",
+  "description": "ゼミの第一課題で制作する予定の「プログラミングのコードの流れを可視化するもの」のためのrepo",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatasoda/soda-flow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatasoda/soda-flow/issues"
+  },
+  "homepage": "https://github.com/whatasoda/soda-flow#readme",
+  "devDependencies": {
+    "typescript": "^3.1.3"
+  }
+}
