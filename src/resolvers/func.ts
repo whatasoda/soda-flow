@@ -1,5 +1,5 @@
-import { GeneralProfile, Resolver } from './general';
 import state from '../state';
+import { GeneralProfile, Resolver } from '../types/resolver';
 
 export interface FuncProfile extends GeneralProfile {
   roles: {

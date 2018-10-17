@@ -9,7 +9,7 @@
     "target": "es2016",
     "module": "commonjs",
     "allowJs": false,
-    "jsx": "preserve",
+    "jsx": "react",
     "sourceMap": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -22,7 +22,8 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "typeRoots": [
-      "./node_modules/@types"
+      "./node_modules/@types",
+      "./src/types"
     ]
   },
   "exclude": [

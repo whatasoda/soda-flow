@@ -1,16 +1,6 @@
 import state from '../state';
 import { getThisArgCode } from '../util/identifier';
-
-export interface GeneralProfile {
-  id: number;
-  start: number;
-  end: number;
-  roles: {
-    [type: string]: any;
-  };
-}
-
-export type Resolver<TProfile, TValue> = (profile: TProfile, value: TValue) => Promise<TValue>;
+import { Resolver, GeneralProfile } from '../types/resolver';
 
 const generalResolver: Resolver<GeneralProfile, any> = (profile, value) =>
   state.flow({
@@ -26,6 +16,10 @@ const generalResolver: Resolver<GeneralProfile, any> = (profile, value) =>
           return value.bind(thisArg);
         }
       }
+      
+      
+      
+      
       return value;
     },
   });

@@ -17,7 +17,7 @@ export const createFlow = (): Flow => {
   const queue: Promise<void>[] = [];
   return (
     { profile, evaluate, createViewProfile },
-    duration = 1000,
+    duration = 300,
   ) => new Promise(async dispatchResult => {
     const greenSignal = Promise.all(queue.slice());
     
@@ -30,7 +30,7 @@ export const createFlow = (): Flow => {
     dispatchResult(result);
     
     const viewProfile = createViewProfile ? createViewProfile(result, profile) : profile;
-    await dispatchViewProfile(viewProfile);
+    await dispatchViewProfile(viewProfile as any, result);
     
     next(duration);
   });
